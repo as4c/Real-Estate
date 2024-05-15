@@ -77,6 +77,8 @@ export const deleteUser = async (req, res) => {
 };
 
 export const savePost = async (req, res) => {
+ 
+
   const postId = req.body.postId;
   const tokenUserId = req.userId;
 
@@ -89,6 +91,8 @@ export const savePost = async (req, res) => {
         },
       },
     });
+    
+    console.log("saved post....", savedPost);
 
     if (savedPost) {
       await prisma.savedPost.delete({

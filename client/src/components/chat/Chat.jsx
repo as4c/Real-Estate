@@ -1,3 +1,5 @@
+
+
 import { useContext, useEffect, useRef, useState } from "react";
 import "./chat.scss";
 import { AuthContext } from "../../context/AuthContext";
@@ -78,6 +80,7 @@ function Chat({ chats }) {
       <div className="messages">
         <h1>Messages</h1>
         {chats?.map((c) => (
+          
           <div
             className="message"
             key={c.id}
